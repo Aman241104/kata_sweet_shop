@@ -15,7 +15,7 @@ describe('AddSweet component', () => {
     fireEvent.change(screen.getByLabelText(/quantity/i), { target: { value: '10' } });
 
     // Submit the form
-    fireEvent.click(screen.getByText(/add/i));
+    fireEvent.click(screen.getByRole('button', { name: /add sweet/i }));
 
     // Assert the callback was called with correct data
     expect(handleAdd).toHaveBeenCalledWith({
