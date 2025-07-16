@@ -1,3 +1,4 @@
+import React from 'react';
 import { useState, useEffect } from 'react';
 import SweetCard from './SweetCard';
 import Spinner from './Spinner';
