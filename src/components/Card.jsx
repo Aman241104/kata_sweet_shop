@@ -1,5 +1,5 @@
 import React from 'react'
-// import { Link } from 'react-router-dom'
+import { Link } from 'react-router-dom'
 
 const Card = ({ children , bg , bgbutton , bghover ,to , title , subtitle , buttontext}) => {
   return (
@@ -8,12 +8,12 @@ const Card = ({ children , bg , bgbutton , bghover ,to , title , subtitle , butt
             <p className="mt-2 mb-4">
               {subtitle}
             </p>
-            <a
+            <Link
               to={to}
               className={`${bgbutton} inline-block text-white rounded-lg px-4 py-2 hover:${bghover}`}
             >
               {buttontext}
-            </a>
+            </Link>
     </div>
   )
 }
