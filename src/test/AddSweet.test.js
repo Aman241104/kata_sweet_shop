@@ -1,6 +1,6 @@
 import React from 'react';
 import { render, screen, fireEvent } from '@testing-library/react';
-import AddSweet from '../components/AddSweet'; // ✅ Adjust path if needed
+import AddSweet from '../components/AddSweet';
 
 describe('AddSweet component', () => {
   test('adds a sweet and passes data to onAdd callback', () => {

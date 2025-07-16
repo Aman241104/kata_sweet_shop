@@ -1,5 +1,9 @@
 import { useEffect, useState } from 'react';
 import AddSweet from './components/AddSweet';
+import Navbar from './components/Navbar';
+import Hero from './components/Hero';
+import HomeCards from './components/HomeCards';
+import SweetListings from './components/SweetListings';
 
 function App() {
   const [sweets, setSweets] = useState([]);
@@ -32,7 +36,10 @@ function App() {
 
   return (
     <div className="App">
-      <h1>Sweet Shop Management</h1>
+      <Navbar />
+      <Hero title="Have A Sweet Day" subtitle="For all Your Sweet cravings"  />
+      <HomeCards />
+      <SweetListings sweets={sweets} />
       <AddSweet onAdd={handleAddSweet} />
 
       <ul>
