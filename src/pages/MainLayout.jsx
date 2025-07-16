@@ -1,14 +1,15 @@
-import React from 'react'
-import {Outlet} from 'react-router-dom';
 import Navbar from '../components/Navbar';
+import { Outlet } from 'react-router-dom';
 
-const MainLayout = () => {
+const MainLayout = ({ setSearchQuery }) => {
   return (
     <>
-        <Navbar />
+      <Navbar setSearchQuery={setSearchQuery} />
+      <main className="p-4">
         <Outlet />
+      </main>
     </>
-  )
-}
+  );
+};
 
-export default MainLayout
+export default MainLayout;

@@ -1,54 +1,36 @@
-import React from 'react'
-import { NavLink } from 'react-router-dom'
-// import logo from '../assets/images/logo.png'
-// import { a } from 'react-router-dom'
+const Navbar = ({ setSearchQuery }) => {
+  const [input, setInput] = useState('');
 
-const Navbar = () => {
-  const linkclass = ({isActive}) => isActive ? 'text-white bg-black hover:bg-gray-900 hover:text-white rounded-md px-3 py-2':'text-white hover:bg-gray-900 hover:text-white rounded-md px-3 py-2'
+  const handleSubmit = (e) => {
+    e.preventDefault();          // Prevents page reload
+    setSearchQuery(input);       // Sends query to parent
+  };
 
   return (
-    <>
-      <nav className="bg-indigo-700 border-b border-indigo-500">
+    <nav className="bg-indigo-700 border-b border-indigo-500">
       <div className="mx-auto max-w-7xl px-2 sm:px-6 lg:px-8">
         <div className="flex h-20 items-center justify-between">
-          <div
-            className="flex flex-1 items-center justify-center md:items-stretch md:justify-start"
-          >
-            {/* <!-- Logo --> */}
-            <NavLink className='flex flex-shrink-0 items-center mr-4' to="/">
-              {/* <img
-                className="h-10 w-auto"
-                src={logo}
-                alt="React Jobs"
-              /> */}
-              <span className="hidden md:block text-white text-2xl font-bold ml-2"
-                >React Jobs</span
-              >
+          <div className="flex items-center space-x-4">
+            <NavLink className="text-white text-2xl font-bold" to="/">
+              Sweet Shop
             </NavLink>
-            <div className="md:ml-auto">
-              <div className="flex space-x-2">
-                <NavLink
-                  to="/"
-                  className={linkclass}>Home
-                </NavLink>
-                <NavLink
-                  to="/sweets"
-                  className={linkclass}
-                  >Sweet</NavLink
-                >
-                <NavLink
-                  to="/add-sweets"
-                  className={linkclass}
-                  >Add Sweet</NavLink
-                >
-              </div>
-            </div>
+            <NavLink to="/" className={linkclass}>Home</NavLink>
+            <NavLink to="/sweets" className={linkclass}>Sweet</NavLink>
+            <NavLink to="/add-sweets" className={linkclass}>Add Sweet</NavLink>
           </div>
+
+          {/* ✅ Search Form */}
+          <form onSubmit={handleSubmit}>
+            <input
+              type="text"
+              placeholder="Search sweets..."
+              className="rounded-md px-3 py-1"
+              value={input}
+              onChange={(e) => setInput(e.target.value)}
+            />
+          </form>
         </div>
       </div>
     </nav>
-    </>
-  )
-}
-
-export default Navbar
+  );
+};

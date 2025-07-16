@@ -1,10 +1,7 @@
-import React from 'react'
-import SweetListings from '../components/SweetListings'
+import SweetListings from '../components/SweetListings';
 
-const SweetsPage = () => {
-  return (
-    <SweetListings />
-  )
-}
+const SweetsPage = ({ searchQuery }) => {
+  return <SweetListings searchQuery={searchQuery} />;
+};
 
-export default SweetsPage
+export default SweetsPage;

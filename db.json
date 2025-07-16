@@ -12,7 +12,7 @@
       "name": "Rasgulla",
       "category": "Syrup-Based",
       "price": 30,
-      "quantity": 50
+      "quantity": 48
     },
     {
       "id": "1003",
@@ -36,18 +36,11 @@
       "quantity": 100
     },
     {
-      "id": "1006",
-      "name": "Barfi",
-      "category": "Milk-Based",
-      "price": 45,
-      "quantity": 30
-    },
-    {
       "id": "1007",
       "name": "Jalebi",
       "category": "Deep-Fried",
       "price": 28,
-      "quantity": 70
+      "quantity": 69
     },
     {
       "id": "1008",
@@ -62,13 +55,6 @@
       "category": "Syrup-Based",
       "price": 32,
       "quantity": 45
-    },
-    {
-      "id": "1010",
-      "name": "Mysore Pak",
-      "category": "Ghee-Based",
-      "price": 55,
-      "quantity": 25
     }
   ]
 }

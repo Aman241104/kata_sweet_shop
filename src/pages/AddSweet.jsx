@@ -1,6 +1,9 @@
 import React, { useState } from 'react';
+import { Navigate, useNavigate } from 'react-router-dom';
 
 function AddSweet({ onAdd }) {
+  const navigate = useNavigate();
+
   const [sweet, setSweet] = useState({
     name: '',
     category: '',
@@ -31,6 +34,8 @@ function AddSweet({ onAdd }) {
 
     onAdd(newSweet);
     setSweet({ name: '', category: '', price: '', quantity: '' });
+
+    return navigate('/sweets');
   };
 
   return (
