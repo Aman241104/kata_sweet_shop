@@ -5,13 +5,11 @@ import {
   createRoutesFromElements,
   RouterProvider
 } from 'react-router-dom';
-
 import MainLayout from './pages/MainLayout';
 import HomePage from './pages/HomePage';
 import SweetsPage from './pages/SweetsPage';
 import AddSweet from './pages/AddSweet';
 import NotFound from './pages/NotFound';
-
 
 function App() {
   const [searchQuery, setSearchQuery] = useState('');
@@ -23,9 +21,7 @@ function App() {
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify(newSweet),
       });
-
       if (!res.ok) throw new Error('Failed to add sweet');
-
       const savedSweet = await res.json();
       console.log('Sweet added:', savedSweet);
     } catch (err) {
@@ -35,8 +31,11 @@ function App() {
 
   const router = createBrowserRouter(
     createRoutesFromElements(
-      <Route path='/' element={<MainLayout setSearchQuery={setSearchQuery} />}>
-        <Route index element={<HomePage />} />
+      <Route 
+        path='/' 
+        element={<MainLayout setSearchQuery={setSearchQuery} searchQuery={searchQuery} />}
+      >
+        <Route index element={<HomePage searchQuery={searchQuery} />} />
         <Route path='/sweets' element={<SweetsPage searchQuery={searchQuery} />} />
         <Route path='/add-sweets' element={<AddSweet onAdd={handleAddSweet} />} />
         <Route path='*' element={<NotFound />} />
