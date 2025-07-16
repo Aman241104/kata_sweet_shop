@@ -1,0 +1,11 @@
+{
+  "sweets": [
+    {
+      "id": "1001",
+      "name": "Kaju Katli",
+      "category": "Nut-Based",
+      "price": 50,
+      "quantity": 20
+    }
+  ]
+}
