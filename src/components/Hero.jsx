@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 const Hero = ({ title = "default", subtitle = "default" }) => {
   return (
@@ -18,12 +19,12 @@ const Hero = ({ title = "default", subtitle = "default" }) => {
           
           {/* Announcement Banner */}
           <div className="flex justify-center">
-            <a
+            <Link
               className="group inline-flex items-center bg-white/10 hover:bg-white/10 border border-white/10 p-1 ps-4 rounded-full shadow-md focus:outline-hidden focus:bg-white/10"
-              href="#"
+              to="/sweets"
             >
               <p className="me-2 text-white text-sm p-2">All the sweets that you want</p>
-            </a>
+            </Link>
           </div>
           {/* End Announcement Banner */}
 

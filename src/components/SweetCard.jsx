@@ -102,7 +102,7 @@ const SweetCard = ({ items, onDelete }) => {
 
         <button
           onClick={handlePurchase}
-          className='block text-center bg-indigo-500 hover:bg-indigo-600 text-white px-4 py-2 rounded-lg text-sm w-full'
+          className='block w-full items-center justify-center rounded-xl bg-indigo-600 px-3 py-2 text-sm font-semibold text-white shadow-sm transition-all duration-150 hover:bg-blue-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-blue-600'
         >
           Purchase
         </button>
