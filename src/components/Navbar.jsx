@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { NavLink } from 'react-router-dom';
+import logo from '../assets/ChatGPT Image Jul 17, 2025, 12_52_15 PM.png'
 
 const Navbar = ({ setSearchQuery }) => {
   const [input, setInput] = useState('');
@@ -21,7 +22,9 @@ const Navbar = ({ setSearchQuery }) => {
           {/* Logo */}
           <div className="flex shrink-0 items-center gap-2">
             <NavLink to="/" className="flex items-center">
-              <span className=" px-2 py-1 text-xl font-medium text-gray-900">Sweet Shop</span>
+              <img src={logo} alt="KATA Logo" className="h-13 pr-5 w-auto object-contain" />
+              {/* <span className="text-xl font-bold text-gray-900">Sweet Shop</span> */}
+
             </NavLink>
             <NavLink to="/" className={linkclass}>Home</NavLink>
             <NavLink to="/sweets" className={linkclass}>Sweet</NavLink>
