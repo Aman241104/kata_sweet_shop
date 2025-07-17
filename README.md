@@ -204,4 +204,4 @@ sweet-shop/
 This project is created for educational purposes as part of a coding kata.
 
 ---
-*Built with ❤️ by Aman Patel*
+*Built by by Aman Patel*
