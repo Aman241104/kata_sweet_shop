@@ -201,7 +201,7 @@ sweet-shop/
 6. Submit a pull request
 
 ## 📄 License
-This project is created for educational purposes as part of a coding kata.
+This project is created for educational purposes as part of a coding test.
 
 ---
 *Built by by Aman Patel*
