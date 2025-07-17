@@ -28,9 +28,15 @@ const SweetListings = ({ isHome = false, searchQuery = '' }) => {
   }, [isHome]);
 
   // Filter by searchQuery
-  const filteredSweets = sweets.filter((sweet) =>
-    sweet.name.toLowerCase().includes(searchQuery.toLowerCase())
-  );
+  const filteredSweets = sweets.filter((sweet) => {
+    const query = searchQuery.toLowerCase();
+
+    return (
+      sweet.name.toLowerCase().includes(query) ||
+      sweet.category.toLowerCase().includes(query) ||
+      sweet.price.toString().toLowerCase().includes(query)
+    );
+  });
 
   return (
     <section className="bg-blue-50 px-4 py-10">
