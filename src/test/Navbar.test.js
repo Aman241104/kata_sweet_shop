@@ -7,6 +7,7 @@ import React from 'react';
 import { render, screen, fireEvent } from '@testing-library/react';
 import { BrowserRouter } from 'react-router-dom';
 import Navbar from '../components/Navbar';
+jest.mock('../assets/ChatGPT Image Jul 17, 2025, 12_52_15 PM.png', () => '');
 
 describe('Navbar component', () => {
   test('renders navigation links', () => {

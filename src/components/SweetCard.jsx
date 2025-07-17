@@ -36,7 +36,7 @@ const SweetCard = ({ items, onDelete }) => {
 
         setIsDeleted(true);
         alert("Purchase Done!");
-        if (onDelete) onDelete(items.id); // notify parent
+        if (onDelete) onDelete(items.id);
         return;
       }
 
